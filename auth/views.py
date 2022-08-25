@@ -1,12 +1,15 @@
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.views import APIView
-from auth.serializers import ChangePasswordSerializer, LoginSerializer, PasswordResetSerializer, ProfileSerializer, SignUpSerializer
+from auth.serializers import ForgetPasswordSerializer, LoginSerializer, ProfileSerializer, SignUpSerializer
 from django.contrib.auth import authenticate
 # from account.renderers import UserRenderer
 from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework.permissions import IsAuthenticated
-
+from django.utils.translation import gettext_lazy as _
+from rest_framework import status
+from rest_framework.permissions import AllowAny, DjangoModelPermissionsOrAnonReadOnly
+from core.models import User
 # Generate Token Manually
 def get_tokens_for_user(user):
   refresh = RefreshToken.for_user(user)
@@ -41,21 +44,21 @@ class ProfileView(APIView):
   def get(self, request, format=None):
     serializer = ProfileSerializer(request.user)
     return Response(serializer.data, status=status.HTTP_200_OK)
+  def patch(self, request, format=None): 
+    user = request.user
+    profile = User.objects.get(id=user.id)
+    serializer = ProfileSerializer(instance=profile, data=request.data, partial=True)
+    if serializer.is_valid():
+        serializer.save()
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+    else:
+      return Response(serializer.errors,status=status.HTTP_400_BAD_REQUEST)
 
-class ChangePasswordView(APIView):
-  permission_classes = [IsAuthenticated]
+class ForgetPasswordView(APIView):
+  permission_classes = [AllowAny,]
   def post(self, request, format=None):
-    serializer = ChangePasswordSerializer(data=request.data, context={'user':request.user})
-    serializer.is_valid(raise_exception=True)
-    return Response({'msg':'Password Changed Successfully'}, status=status.HTTP_200_OK)
+      serializer = ForgetPasswordSerializer(data=request.data)
+      serializer.is_valid(raise_exception=True)
+      return Response({'msg':'Password Changed Successfully'}, status=status.HTTP_200_OK)
 
 
-
-class PasswordResetView(APIView):
-  def post(self, request, uid, token, format=None):
-    serializer = PasswordResetSerializer(data=request.data, context={'uid':uid, 'token':token})
-    serializer.is_valid(raise_exception=True)
-    return Response({'msg':'Password Reset Successfully'}, status=status.HTTP_200_OK)
-  
-  
-  # https://www.youtube.com/watch?v=lo7lBD9ynVc&ab_channel=GeekyShows
