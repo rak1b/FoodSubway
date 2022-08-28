@@ -1,0 +1,392 @@
+body {
+  --success: #64a854;
+  --warning: #fe9a30;
+  --dark: #575757;
+}
+button {
+  outline: none;
+  border: none;
+}
+.main_container {
+  padding: 0 182px;
+  margin-top: 23px;
+  width: 1980px;
+  height: 1020px;
+}
+.product_container {
+  margin-top: 120px;
+}
+
+.logo {
+  height: 49.10427474975586px;
+  width: 94.9999771118164px;
+  border-radius: 0px;
+  padding: 0;
+}
+
+.nav_item_custom {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: #000000;
+  margin-right: 51px;
+}
+
+.btn_fs {
+  border-radius: 8px;
+  height: 34px;
+  width: 106px;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  color: #ffffff;
+  outline: none;
+  border: none;
+}
+
+.btn_login {
+  background: var(--warning);
+  margin-right: 19px;
+}
+.btn_signup {
+  background: var(--success);
+}
+
+.img1 img {
+  width: 905px;
+  height: 481px;
+}
+.imgsm1 img {
+  width: 266px;
+  height: 149px;
+}
+.imgsm2 img {
+  width: 266px;
+  height: 149px;
+}
+
+.imgsm3 img {
+  width: 266px;
+  height: 149px;
+}
+.heading {
+  width: 645px;
+  height: 124px;
+
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 52.8759px;
+  line-height: 62px;
+
+  color: #000000;
+}
+.product_breadcrumb {
+  width: 300px;
+  height: 28px;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  margin-top: 21px;
+  color: #000000;
+  margin-bottom: 30px;
+}
+.product_breadcrumb span {
+  font-weight: 800;
+}
+
+.price_btn_warning {
+  width: 164px;
+  height: 99px;
+  background: #fe9a30;
+  border-radius: 10px;
+  font-family: "Exo";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+
+  /* identical to box height */
+  text-align: center;
+
+  color: #ffffff;
+}
+
+.price_btn_success {
+  width: 281px;
+  height: 99px;
+  border-radius: 10px;
+  background-color: var(--success);
+  padding: 0 25px;
+}
+
+.price_btn_dark {
+  width: 164px;
+  height: 99px;
+  background: var(--dark);
+  border-radius: 10px;
+  font-family: "Exo";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+
+  /* identical to box height */
+  text-align: center;
+
+  color: #ffffff;
+}
+.padding_right50px {
+  padding-right: 50px;
+}
+.line_container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0 20px;
+}
+.percent_container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: #ffffff;
+}
+.line {
+  width: 3px;
+  height: 60%;
+  background-color: #ffffff;
+}
+.fs_active {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-decoration-line: underline;
+  color: #64a854;
+}
+.chr {
+  width: 646px;
+  height: 2px;
+  background: #cfcfcf;
+  margin: 37px 0;
+}
+.amount {
+  font-family: Exo;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 47px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #ffffff;
+}
+
+.taka {
+  font-family: "Exo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 47px;
+  text-align: center;
+
+  color: #ffffff;
+}
+.quantity {
+  font-family: "Exo";
+  font-style: normal;
+  font-weight: 200;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.intInput {
+  width: 100%;
+  height: 71px;
+  border: 2px solid #fe9a30;
+  border-radius: 10px;
+}
+
+.priceShow {
+  width: 100%;
+  height: 71px;
+  background: #e7e7e7;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Exo";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 35.5385px;
+  line-height: 47px;
+
+  color: #575757;
+}
+
+.order_now {
+  width: 285px;
+  height: 71px;
+  background: var(--success);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+
+  /* identical to box height */
+
+  color: #ffffff;
+}
+
+.lorem {
+  width: 623px;
+  height: 112px;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  margin-top: 75px;
+  color: #8c8c8c;
+}
+.percent {
+  font-size: 40px;
+}
+
+@media only screen and (max-width: 1979px) {
+  .main_container {
+    padding: 0 182px;
+    margin-top: 23px;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .img1 img {
+    width: 100%;
+    height: 400px;
+  }
+  .imgsm1 img {
+    width: 100%;
+  }
+  .imgsm2 img {
+    width: 100%;
+  }
+
+  .imgsm3 img {
+    width: 100%;
+  }
+
+  .nav_item_custom {
+    font-size: 16px;
+    margin-right: 18px;
+  }
+  .btn_fs {
+    border-radius: 8px;
+    height: 34px;
+    width: 90px;
+    font-size: 14px;
+  }
+  .heading {
+    width: 514px;
+    height: 124px;
+    font-family: "Raleway";
+    font-style: bold;
+    font-weight: 700;
+    font-size: 42.8759px;
+    line-height: 52px;
+    color: #000000;
+  }
+  .product_container {
+    margin-top: 50px;
+  }
+  .price_btn_dark {
+    width: 100%;
+  }
+  .price_btn_warning {
+    width: 100%;
+  }
+  .price_btn_success {
+    width: 100%;
+  }
+  .amount {
+    font-size: 24px;
+  }
+
+  .quantity {
+    font-size: 20px;
+  }
+  .order_now {
+    width: 100%;
+  }
+  .priceShow {
+    font-size: 24px;
+  }
+  .lorem {
+    margin-top: 30px;
+    width: 100%;
+  }
+  .chr {
+    width: 100%;
+    margin: 21px 0;
+  }
+  .product_breadcrumb {
+    margin-top: 13px;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .main_container {
+    padding: 0 52px;
+  }
+  .heading {
+    margin-top: 30px;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .heading {
+    margin-top: 30px;
+    width: 100%;
+    font-size: 30px;
+    height: auto;
+  }
+  .amount,
+  .taka,
+  .quantity {
+    font-size: 15px;
+  }
+  .percent {
+    font-size: 20px;
+  }
+  .price_btn_success {
+    padding: 0 5px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .padding_right50px {
+    padding-right: 0;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .btn_signup {
+    margin-top: 16px;
+  }
+
+  .btn_login {
+    margin-top: 16px;
+  }
+  
+}
